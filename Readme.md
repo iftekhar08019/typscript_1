@@ -14,9 +14,9 @@ An **interface** in TypeScript is primarily used to define the shape of an objec
 
 #### Example of an Interface:
 
-typescript
+  
 
-`interface Car {
+interface Car {
   brand: string;
   model: string;
   year: number;
@@ -26,7 +26,7 @@ const myCar: Car = {
   brand: "Toyota",
   model: "Corolla",
   year: 2020,
-};` 
+};
 
 ### **2\. Types**
 
@@ -34,11 +34,11 @@ A **type** is more flexible and allows defining not only object shapes but also 
 
 #### Example of a Type:
 
-typescript
+  
 
   
 
-`type Person = {
+type Person = {
   name: string;
   age: number;
 };
@@ -46,7 +46,7 @@ typescript
 const user: Person = {
   name: "John",
   age: 30,
-};` 
+};
 
 ### **Key Differences:**
 
@@ -54,21 +54,13 @@ const user: Person = {
     
     Example of extending an interface:
     
-    typescript
-    
-      
-    
-    `interface Employee extends Person {
+    interface Employee extends Person {
       salary: number;
     }` 
     
     Example of intersection with types:
     
-    typescript
-    
-      
-    
-    `type Employee = Person & { salary: number };` 
+    type Employee = Person & { salary: number };
     
 *   **Use Cases:** Interfaces are typically used when you want to define the structure of an object or class. Types are more flexible and are used for defining primitives, unions, intersections, or any other type construct.
     
@@ -93,16 +85,16 @@ One of TypeScript’s biggest advantages is its **static type checking**. By req
 
 #### Example of Type Safety:
 
-typescript
+  
 
   
 
-``function greet(name: string): string {
+function greet(name: string): string {
   return `Hello, ${name}!`;
 }
 
 // Type error: Argument of type 'number' is not assignable to parameter of type 'string'.
-greet(123);`` 
+greet(123);
 
 By providing **type annotations** and enforcing strict typing, TypeScript helps developers spot mistakes early in the process, making debugging easier and faster.
 
@@ -121,18 +113,18 @@ Types act as documentation for your code. When you define types or interfaces fo
 
 #### Example:
 
-typescript
+  
 
   
 
-``interface Product {
+interface Product {
   name: string;
   price: number;
 }
 
 function getProductDetails(product: Product): string {
   return `${product.name} costs ${product.price}`;
-}`` 
+}
 
 Here, it’s immediately clear what kind of data the function expects (`name` and `price`), making collaboration much easier.
 
@@ -151,11 +143,11 @@ As projects scale, maintaining them becomes more complex. TypeScript’s strong 
 
 #### Example of a TypeScript function in a scalable project:
 
-typescript
+  
 
   
 
-`function add(a: number, b: number): number {
+function add(a: number, b: number): number {
   return a + b;
 }
 
