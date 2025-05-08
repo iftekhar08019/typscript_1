@@ -82,7 +82,72 @@ function filterByRating(items: { title: string; rating: number }[]): { title: st
   }
   
   // Example usage:
-  console.log(processValue("hellodeded"));  // Output: 5
+  console.log(processValue("hello"));  // Output: 5
   console.log(processValue(104));       // Output: 20
   
+
+
+  interface Product {
+    name: string;
+    price: number;
+  }
+  
+  function getMostExpensiveProduct(products: Product[]): Product | null {
+    if (products.length === 0) {
+      return null;
+    }
+    
+    return products.reduce((maxProduct, currentProduct) => {
+      return currentProduct.price > maxProduct.price ? currentProduct : maxProduct;
+    });
+  }
+  
+  // Example usage:
+  const products: Product[] = [
+    { name: "Pen", price: 10 },
+    { name: "Notebook", price: 25 },
+    { name: "Bag", price: 50 }
+  ];
+  
+  console.log(getMostExpensiveProduct(products));  
+  // Output: { name: "Bag", price: 50 }
+  
+  enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+  }
+  
+  function getDayType(day: Day): string {
+    if (day === Day.Saturday || day === Day.Sunday) {
+      return "Weekend";
+    } else {
+      return "Weekday";
+    }
+  }
+  
+  // Example usage:
+  console.log(getDayType(Day.Monday));   // Output: "Weekday"
+  console.log(getDayType(Day.Sunday));   // Output: "Weekend"
+  
+
+  async function squareAsync(n: number): Promise<number> {
+    return new Promise((resolve, reject) => {
+      if (n < 0) {
+        reject(new Error("Negative number not allowed"));
+      } else {
+        setTimeout(() => {
+          resolve(n * n);
+        }, 1000); // Resolves after 1 second with the square of the number
+      }
+    });
+  }
+  
+  // Example usage:
+  squareAsync(4).then(console.log);        // Output after 1s: 16
+  //squareAsync(-3).catch(console.error);    // Output: Error: Negative number not allowed
   
