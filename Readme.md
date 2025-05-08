@@ -4,7 +4,7 @@ Both **interfaces** and **types** allow you to define how data should look, but 
 
 *   **Interfaces** are mainly used to describe the structure of an object or class. When you use an interface, you’re saying, “This object should look like this.” They’re ideal when you need to define how objects and classes should behave. For example:
     
-       
+    typescript
     
       
     
@@ -51,6 +51,8 @@ At the end of the day, if you’re working with simple object shapes or need som
 * * *
 
 
+========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
 #### How TypeScript Helps with Code Quality and Maintainability
 
 TypeScript isn’t just about static typing. It also works wonders for improving the **quality** of your code and making your projects more **maintainable**. Here's how:
@@ -58,7 +60,7 @@ TypeScript isn’t just about static typing. It also works wonders for improving
 1.  **Catching Errors Early**  
     One of the biggest perks of TypeScript is that it helps catch errors during development—before you even run your code. For instance, if you pass the wrong type to a function, TypeScript will give you an error right away. This means fewer bugs slip through the cracks.
     
-       
+    typescript
     
       
     
@@ -76,7 +78,7 @@ TypeScript isn’t just about static typing. It also works wonders for improving
 3.  **Clearer Code and Easier Collaboration**  
     Types act as a form of **documentation** for your code. When you define types or interfaces, you're not just telling TypeScript how the code should behave—you’re also making your intentions clearer to others. If you’re working on a big team (or even just collaborating with a friend), this clarity can go a long way in preventing misunderstandings.
     
-       
+    typescript
     
       
     
